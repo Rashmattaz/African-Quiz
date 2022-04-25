@@ -45,13 +45,12 @@ function handleProgress(event) {
 }
 
 function handleLoad(event) {
-  // console.log(event);
+ 
   var img = new Image();
-  // img.crossOrigin = 'Anonymous';
+
   img.src = event.item.src;
   preloaded.appendChild(img);
-  // var img = queue.getResult('image',true);
-  // preloaded.appendChild(event.result);
+
 }
 
 function handleComplete() { 
