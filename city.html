@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+
+
+  <title>African Quiz</title>
+  
+  
+  
+   <link rel="stylesheet" href="citystyle.css">
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="main-container">
+  <div class="img img-1"></div>
+  <div class="img img-2"></div>
+  <div class="img img-3"></div>
+  <div class="img img-4"></div>
+  <div class="img img-5"></div>
+  <div class="title title-1">Lagos</div>
+  <div class="title title-2">Accra</div>
+  <div class="title title-3">Douala</div>
+  <div class="title title-4">johannesburg</div>
+  <div class="title title-5">Nairobi</div>
+  <div class="info-container">
+    <h3>Thank you for <a href="http://animista.net" target="_blank">playing the African Quiz</a></h3>
+    <h4>Every mountain top is within reach if you just keep climbing</h4>
+     <h4><a href="http://animista.net/play/background/ken-burns/kenburns-top" target="_blank">Hope you had</a> <a href="http://animista.net/play/background/ken-burns/kenburns-bottom" target="_blank">a fun tour of our website</a></h4>
+    
+    <!-- HTML !-->
+
+
+ <a href="quiz.html">
+    <button class="button-9"><h4 id="back">Back Home</h4></button>
+  </a> 
+
+  </div>
+  <div class="loader-container">
+    <div class="loader"> </div>
+    <p>Loading images of African Cities...</p>
+  </div>
+</div>
+<div class="preloaded"></div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/PreloadJS/1.0.1/preloadjs.js'></script>
+      <script id="rendered-js" >
+var preloaded = document.querySelector('.preloaded');
+var queue = new createjs.LoadQueue(true, null, true);
+
+queue.on('fileload', handleLoad, this);
+
+queue.on('progress', handleProgress, this);
+
+queue.on('complete', handleComplete, this);
+
+queue.loadManifest([
+{
+  id: 'lag',
+  crossOrigin: true,
+  type: createjs.Types.IMAGE,
+  src: 'lagos.jpg' },
+
+{
+  id: 'acr',
+  crossOrigin: true,
+  type: createjs.Types.IMAGE,
+  src:'accra.jpg '
+   },
+
+{
+  id: 'cai',
+  crossOrigin: true,
+  type: createjs.Types.IMAGE,
+  src: 'douala.jpg' },
+
+{
+  id: 'joh',
+  crossOrigin: true,
+  type: createjs.Types.IMAGE,
+  src: 'johannesburg.jpg' },
+
+{
+  id: 'nai',
+  crossOrigin: true,
+  type: createjs.Types.IMAGE,
+  src: 'nairobi.jpg' }]);
+
+
+
+function handleProgress(event) {
+  console.log(event.progress);
+}
+
+function handleLoad(event) {
+  // console.log(event);
+  var img = new Image();
+  // img.crossOrigin = 'Anonymous';
+  img.src = event.item.src;
+  preloaded.appendChild(img);
+  // var img = queue.getResult('image',true);
+  // preloaded.appendChild(event.result);
+}
+
+function handleComplete() {
+  document.querySelector('.main-container').classList.add('loaded');
+  console.log('done');
+}
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
