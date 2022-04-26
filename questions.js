@@ -1,4 +1,5 @@
-// code by webdevtrick (https://webdevtrick.com)
+
+
 function Quiz(questions) {
     this.score = 0;
     this.questions = questions;
@@ -38,11 +39,11 @@ function populate() {
         showScores();
     }
     else {
-        // show question
+    
         var element = document.getElementById("question");
         element.innerHTML = quiz.getQuestionIndex().text;
 
-        // show options
+        
         var choices = quiz.getQuestionIndex().choices;
         for(var i = 0; i < choices.length; i++) {
             var element = document.getElementById("choice" + i);
@@ -76,22 +77,22 @@ function showScores() {
     element.innerHTML = gameOverHTML;
 };
 
-// create questions here
+
 var questions = [
-    new Question("Where is Nigeria located in Africa?", [  "West Africa", "South Africa","East Africa ", "North Africa"], " West Africa"),
-    new Question(" Which African leader spent 27 years in jail?", [ "Nelson Mandela ", " Jerry Rawlings", " Paul Biya", "Muhammad Buhari"], "Nelson Mandela "),
+    new Question("jollof rice is common to which country?", [ "Benin", "Tunisia","congo", "Nigeria"], "Nigeria"),
+    new Question("Which leader spent 27 years in jail?", [ "Nelson Mandela ", " Jerry Rawlings", " Paul Biya", "Samuel Doe"], "Nelson Mandela "),
     new Question("Which country is also called the Gold Coast?", ["Angola", "Guinea","Togo", "Ghana"], "Ghana"),
-    new Question("George Weah is from where in Africa?", ["Rwanda", "Mali", "Liberia", "Algeria"], "Tanzania"),
-    new Question("Where is Kalahari Games reserve located?", ["Lesotho", "Namibia", "Egypt", "Gabon"], "Namibia"),
-    new Question("Nairobi is a part of what country in Africa? ",  [ "Comoros", "Zimbabwe ","Cape Verde ", "Kenya"], "Kenya"),
-    new Question("Ngondo Festival is celebrated where in Africa?", [ "Uganda", "mauritius", "Cameroon", "Senegal"], "Cameroon"),
+    new Question("George Weah is from where in Africa?", ["Rwanda", "Mali", "Liberia", "Algeria"], "Liberia"),
+    new Question("Addis Ababa is the capial of where?", ["Lesotho", "Ethiopia", "Mauritania", "Gabon"], "Ethiopia"),
+    new Question("Nairobi is a part of what country? ",  [ "Comoros", "Zimbabwe ","Cape Verde ", "Kenya"], "Kenya"),
+    new Question("Samuel Eto is from where ?", [ "Uganda", "mauritius", "Cameroon", "Senegal"], "Cameroon"),
     new Question("What is the capital of Morocco?  ", ["Rabat", "Cairo","Abuja", "Douala"], "Rabat"),
-    new Question("The Zulu Tribe is from what region in Africa?", ["Djibouti", "Mali", "South Africa", "Algeria"], "South Africa"),
-    new Question("Ghadafi is from what country in Africa?", ["Chad", "Mauritania", "Mozambique", "Libya"], "Libya")
+    new Question("The Zulu Tribe is from where?", ["Djibouti", "Mali", "South Africa", "Algeria"], "South Africa"),
+    new Question("which country has the most pyramids?", ["Chad", "Egypt", "Mozambique", "Sudan"], "Sudan")
 ];
 
-// create quiz
+
 var quiz = new Quiz(questions);
 
-// display quiz
+
 populate();
